@@ -4,6 +4,6 @@ import './styles.scss'
 
 export default function Login() {
   return (
-    <h1>Hello World</h1>
+    <h1>Login Page</h1>
   )
 }
