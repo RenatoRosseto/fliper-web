@@ -1,3 +1,154 @@
+/* container page */
+.cBougk {
+  background: rgb(232, 235, 246) none repeat scroll 0% 0%;
+}
+
+/* container logo */
+.hMPvwS {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(59, 92, 184);
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+}
+
+.imgLogo {
+  width: 22em;
+}
+
+/* container login */
+.ilqVkw {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(232, 235, 246);
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* container bloco inputs login */
+.fjfPfa {
+  width: 100%;
+  max-width: 25vw;
+  flex: 6 1 0%;
+  -moz-box-align: stretch;
+  align-items: stretch;
+  -moz-box-pack: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media(max-width: 767px) {
+  .fjfPfa {
+    max-width: 50vw;
+  }
+}
+
+/* container titulos input login */
+.dBpnMu {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dBpnMu h1 {
+  color: rgb(59, 92, 184);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.dBpnMu h3 {
+  color: rgb(59, 92, 184);
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  font-weight: 900;
+}
+
+/* container inputs login */
+.XNwXh {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.XNwXh input {
+  width: 100%;
+  margin: 0px;
+}
+
+.ant-form-item {
+  width: 100%;
+}
+
+/* input email */
+.gjQfWK {
+  border-color: rgb(111, 111, 111);
+  padding: 10px 25px;
+  border-width: 1.5px;
+  border-radius: 50px;
+  font-size: 18px;
+  height: 42px;
+  background-color: transparent;
+  color: rgb(111, 111, 111);
+}
+
+.gjQfWK:hover {
+  border-color: rgb(59, 92, 184) !important;
+  box-shadow: none !important;
+}
+
+/* input senha */
+.fTZgxx {
+  border-color: #6f6f6f;
+  padding: 10px 25px;
+  border-width: 1.5px;
+  border-radius: 50px;
+  font-size: 18px;
+  height: 42px;
+  background-color: transparent;
+  color: #6f6f6f;
+}
+
+.fTZgxx .ant-input {
+  padding: 4px 11px !important;
+  background: none;
+  font-size: 18px;
+}
+
+.ant-input:hover {
+  border-color: rgb(59, 92, 184) !important;
+  box-shadow: none !important;
+}
+
+.fTZgxx img {
+  width: 20px;
+}
+
+/* container btn login */
+.jhoAUI {
+  display: flex;
+  flex-direction: column;
+  margin-top: -5px;
+  width: 100%;
+}
+
+/* botao entrar */
 .kSBIxJ {
   font-weight: bold;
   border-radius: 50px;
@@ -13,4 +164,73 @@
 .kSBIxJ { 
   background-color: rgb(251, 149, 86) !important;
   color: rgb(255, 255, 255) !important;
+}
+
+/* manter conectado */
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-checkbox-wrapper span {
+  color: rgb(116, 119, 140) !important;
+}
+
+/* esqueceu a senha */
+.hqqMXw {
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 0px;
+  background-color: transparent;
+  border: 0px none;
+  width: 112px;
+  height: 24px;
+  font-size: 14px;
+  color: rgb(116, 119, 140);
+}
+
+.jhoAUI .forgot-button {
+  color: rgb(59, 92, 184) !important;
+  font-size: 22px;
+  width: 100%;
+}
+
+/* container faça seu cadastro */
+.ioRIdA {
+  display: flex;
+  -moz-box-pack: end;
+  justify-content: flex-end;
+  -moz-box-align: center;
+  align-items: center;
+  flex: 1 1 0%;
+  font-size: 22px;
+  flex-direction: column;
+}
+
+.ioRIdA p {
+  text-align: center;
+  color: rgb(116, 119, 140);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+a {
+  color: rgb(59, 92, 184);
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  color: rgb(59, 92, 184);
 }
