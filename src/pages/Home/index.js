@@ -13,13 +13,13 @@ import './styles.scss'
 
 export default function Home() {
   const { Header, Sider, Content } = Layout;
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider trigger={null} collapsible collapsed={collapsed} onMouseEnter={() => setCollapsed(false)} onMouseLeave={() => setCollapsed(true)} >
         <div className="logo" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} >
           <Menu.Item key="1" icon={<UserOutlined />}>
             nav 1
           </Menu.Item>
@@ -32,15 +32,16 @@ export default function Home() {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }}>
-          <button type="submit" className="ant-btn ant-btn-secondary ant-btn-lg sc-dmlrTW kSBIxJ" onClick={() => setCollapsed(!collapsed)}>Teste abre menu</button>
+        <Header className="site-layout-background" style={{ padding: 0, background: '#fff' }}>
+          header
         </Header>
         <Content
           className="site-layout-background"
           style={{
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            background: '#e8ebf6'
           }}
         > 
           Content
