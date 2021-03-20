@@ -60,7 +60,7 @@ export default function Login() {
                   <div className="ant-col ant-form-item-control">
                     <div className="ant-form-item-control-input">
                       <div className="ant-form-item-control-input-content">
-                        <Link to="/teste">
+                        <Link to="/home">
                           <button type="submit" className="ant-btn ant-btn-secondary ant-btn-lg sc-dmlrTW kSBIxJ">
                             <span>Entrar</span>
                           </button>
