@@ -1,0 +1,18 @@
+.containerCard {
+  background: #FFF;
+  height: 352pt;
+  width: 344.5pt;
+  border-radius: 20px;
+  box-shadow: #9AA3BC 1px 1px 1px 0px;
+}
+
+@media(max-width: 767px) {
+  .containerCard {
+    width: 70vw;
+    margin-top: 10px;
+  }
+}
+
+.containerInfos {
+  padding: 20px 24px 24px;
+}

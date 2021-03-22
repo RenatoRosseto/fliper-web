@@ -12,11 +12,14 @@ import {
   UploadOutlined,
 } from '@ant-design/icons';
 
+import Card from '../../components/Card'
+
 import './styles.scss'
 
 export default function Home() {
   const { Header, Sider, Content } = Layout;
   const [collapsed, setCollapsed] = useState(true);
+  const [btnVerMais, setBtnVerMais] = useState(false);
 
   const [valorInvestido, setValorInvestido] = useState(0)
   const [rentabilidadeMes, setRentabilidadeMes] = useState(0)
@@ -56,7 +59,7 @@ export default function Home() {
       </Sider>
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0, background: '#fff' }}>
-          header
+          <h2 className="tituloHeader">Olá, Usuário</h2>
         </Header>
         <Content
           className="site-layout-background"
@@ -67,7 +70,32 @@ export default function Home() {
             background: '#e8ebf6'
           }}
         > 
-          Content
+          <div className="containerCardsHome">
+            <Card>
+              <div className="containerCardSeuResumo">
+                <div className="containerTitulo">
+                  
+                </div>
+                <div className="containerValorInvestido">
+                    
+                </div>
+                <div className="containerDivider"></div>
+                <div className="containerBtn">
+                  <button className="btnVerMais" onClick={() => setBtnVerMais(!btnVerMais)}>{btnVerMais ? "VER MENOS" : "VER MAIS"}</button>
+                </div>
+              </div>
+            </Card>
+            {
+              btnVerMais ? 
+              (
+                <Card>
+                  <p>bla1</p>
+                  <p>bla2</p>
+                  <p>bla3</p>
+                </Card>
+              ) : null
+            }
+          </div>
         </Content>
       </Layout>
     </Layout>
