@@ -3,19 +3,16 @@ import React, { useState, useEffect } from 'react'
 import client from '../../services/client-graphql'
 import { wealthSummary } from '../../services/queries/wealthSummary'
 
-import { Menu, Dropdown } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import Card from '../../components/Card'
+import LineChart from '../../components/LineChart'
 
-import { Layout } from 'antd';
+import { Menu, Dropdown, Layout } from 'antd';
+
 import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
   UserOutlined,
   VideoCameraOutlined,
   UploadOutlined,
 } from '@ant-design/icons';
-
-import Card from '../../components/Card'
 
 import './styles.scss'
 
@@ -120,9 +117,7 @@ export default function Home() {
               btnVerMais ? 
               (
                 <Card>
-                  <p>bla1</p>
-                  <p>bla2</p>
-                  <p>bla3</p>
+                  <LineChart />
                 </Card>
               ) : null
             }
