@@ -91,20 +91,20 @@ export default function Home() {
                 </div>
                 <div className="containerValorInvestido">
                     <span className="infoValor">Valor investido</span>
-                    <span className="valorInvestido">{valorInvestido}</span>
+                    <span className="valorInvestido">{valorInvestido.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>
                 </div>
                 <div className="containerRentabilidade">
                   <div className="ant-row">
                     <span className="infoValor">Rentabilidade/mês</span>
-                    <span className="valoresRentabilidade">{rentabilidadeMes}</span>
+                    <span className="valoresRentabilidade">{rentabilidadeMes.toString().match(/^-?\d+(?:\.\d{0,3})?/)[0].replace('.', ',')}%</span>
                   </div>
                   <div className="ant-row">
                     <span className="infoValor">CDI</span>
-                    <span className="valoresRentabilidade">{valorCDI}</span>
+                    <span className="valoresRentabilidade">{valorCDI.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0].replace('.', ',')}%</span>
                   </div>
                   <div className="ant-row">
                     <span className="infoValor">Ganho/mês</span>
-                    <span className="valoresRentabilidade">{ganhoMes}</span>
+                    <span className="valoresRentabilidade">R$ {ganhoMes.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0].replace('.', ',')}</span>
                   </div>
                 </div>
                 <div className="containerDivider"></div>
