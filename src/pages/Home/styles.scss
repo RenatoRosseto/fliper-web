@@ -44,6 +44,13 @@
   }
 }
 
+@media(max-width: 450px) {
+  .ant-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Informações do card Seu resumo */
 .containerCardSeuResumo {
   display: flex;
