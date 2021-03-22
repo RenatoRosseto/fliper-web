@@ -44,6 +44,71 @@
   }
 }
 
+/* Informações do card Seu resumo */
+.containerCardSeuResumo {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerTitulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7pt;
+}
+
+.tituloResumo {
+  color: #3B5CB8;
+  font-size: 25pt;
+  font-weight: 700;
+}
+
+.iconeVerMais:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.containerValorInvestido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10pt;
+  margin: 37pt 0 35pt 0;
+}
+
+.infoValor {
+  color: #606377;
+  font-size: 16pt;
+}
+
+.valorInvestido {
+  color: #3B5CB8;
+  font-size: 22pt;
+  font-weight: 700;
+}
+
+.ant-row {
+  justify-content: space-between;
+}
+
+.valoresRentabilidade {
+  color: #3B5CB8;
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+.containerRentabilidade {
+  display: flex;
+  flex-direction: column;
+  gap: 10pt;
+}
+
+.containerDivider {
+  border-bottom: 1px solid #9AA3BC;
+  margin: 27pt 0 22pt 0;
+}
+
 .containerBtn {
   width: 100%;
   display: flex;
@@ -59,7 +124,7 @@
   font-size: 1em;
   font-weight: bold;
   color: #3B5CB8;
-  min-width: 100px;
+  min-width: 103px;
   text-align: center;
   cursor: pointer;
   outline: currentcolor none medium;

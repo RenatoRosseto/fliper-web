@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react'
 import client from '../../services/client-graphql'
 import { wealthSummary } from '../../services/queries/wealthSummary'
 
-import { Layout, Menu } from 'antd';
+import { Menu, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+
+import { Layout } from 'antd';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -25,6 +28,14 @@ export default function Home() {
   const [rentabilidadeMes, setRentabilidadeMes] = useState(0)
   const [valorCDI, setValorCDI] = useState(0)
   const [ganhoMes, setGanhoMes] = useState(0)
+
+  const menu = (
+    <Menu>
+      <Menu.Item key="0">1st menu item</Menu.Item>
+      <Menu.Item key="1">2nd menu item</Menu.Item>
+      <Menu.Item key="3">3rd menu item</Menu.Item>
+    </Menu>
+  );
 
   useEffect(() => {
     async function carregaDados() {
@@ -74,10 +85,30 @@ export default function Home() {
             <Card>
               <div className="containerCardSeuResumo">
                 <div className="containerTitulo">
-                  
+                  <span className="tituloResumo">Seu resumo</span>
+                  <Dropdown overlay={menu} placement="bottomRight" trigger={['click']}>
+                    <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                      <img className="iconeVerMais" src="/assets/more_vert-24px.svg" />
+                    </a>
+                  </Dropdown>
                 </div>
                 <div className="containerValorInvestido">
-                    
+                    <span className="infoValor">Valor investido</span>
+                    <span className="valorInvestido">{valorInvestido}</span>
+                </div>
+                <div className="containerRentabilidade">
+                  <div className="ant-row">
+                    <span className="infoValor">Rentabilidade/mês</span>
+                    <span className="valoresRentabilidade">{rentabilidadeMes}</span>
+                  </div>
+                  <div className="ant-row">
+                    <span className="infoValor">CDI</span>
+                    <span className="valoresRentabilidade">{valorCDI}</span>
+                  </div>
+                  <div className="ant-row">
+                    <span className="infoValor">Ganho/mês</span>
+                    <span className="valoresRentabilidade">{ganhoMes}</span>
+                  </div>
                 </div>
                 <div className="containerDivider"></div>
                 <div className="containerBtn">
